@@ -1,0 +1,29 @@
+{
+  "products": [
+    { "id": 1, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 2, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 3, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 4, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 5, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 6, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 7, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 8, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 9, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 10, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 11, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 12, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 13, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 14, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 15, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 16, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 17, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 18, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 19, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 20, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 21, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 22, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 23, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 24, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"},
+    { "id": 25, "name": "bluza", "price": "12.99", "brand": "TommyHilfiger", "size": ["M","S","L"], "color": ["red","green"], "material": "cotton"}
+  ]
+}

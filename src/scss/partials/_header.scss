@@ -1,0 +1,107 @@
+.header{
+  background-color: #F5F5F5;
+  height: 750px;
+
+  &__background{
+    background-image: url("../pictures/flower1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 700px;
+  }
+
+  &__nav--logo{
+    display: flex;
+    align-items: center;
+    height: 80px;
+  }
+
+  &__nav--item{
+    color: #8F8F8F;
+    text-transform: uppercase;
+    transition: 0.5s;
+
+    &:hover{
+      color: #000000;
+      transition: 0.5s;
+    }
+  }
+
+  &__nav--list{
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  &__nav--basket{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+  }
+
+  &__intro--button-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 600px;
+  }
+
+  &__intro--button-left{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 600px;
+  }
+
+  &__intro--button-item{
+    border: none;
+    background: none;
+    font-size: 40px;
+    transition: 0.5s;
+    height: 200px;
+
+    &:hover{
+      transform: scale(1.5);
+      transition: 0.5s;
+    }
+  }
+
+  &__intro--post{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 600px;
+  }
+
+  &__intro--link{
+
+    &-item{
+      color: #8F8F8F;
+      text-decoration: underline;
+      font-size: 20px;
+    }
+
+    &-item:hover{
+      color: #8F8F8F;
+      text-decoration: underline;
+    }
+  }
+
+  &__intro--text{
+
+  }
+
+  &__page{
+    display: flex;
+    justify-content: flex-end;
+
+    &--item{
+      color: #8F8F8F;
+    }
+  }
+
+}
