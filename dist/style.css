@@ -96,7 +96,9 @@
   -ms-flex-align: center;
       align-items: center; }
   .main__show-info--label {
-    padding: 0 0 0 20px; }
+    padding: 0 0 0 20px;
+    font-size: 20px;
+    margin: 0; }
   .main__show-info--select {
     border: none;
     background: none;
@@ -116,7 +118,7 @@
     -ms-flex-preferred-size: 50%;
         flex-basis: 50%;
     padding: 20px 0 0 20px;
-    height: 450px; }
+    height: 455px; }
   .main__elements--item-background {
     display: -ms-flexbox;
     display: flex;
@@ -144,7 +146,135 @@
     -ms-flex-pack: justify;
         justify-content: space-between; }
 
+.main__category--info {
+  margin: 0;
+  padding: 50px 0 0 0;
+  font-size: 20px; }
+
+.main__category--line {
+  color: #848484;
+  margin: 40px 0 0 0; }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
+
+.main__category {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .main__category--text {
+    color: #848484;
+    padding: 20px 0 0 0; }
+
+.main__filter-price--info {
+  margin: 0;
+  padding: 40px 0 15px 0;
+  font-size: 18px; }
+
+.main__filter-price--filter {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .main__filter-price--filter-down {
+    border-radius: 2px;
+    width: 30%;
+    border: 1px solid whitesmoke;
+    color: #c1c1c1; }
+  .main__filter-price--filter-up {
+    border-radius: 2px;
+    margin: 0 0 0 10px;
+    width: 30%;
+    border: 1px solid whitesmoke;
+    color: #c1c1c1; }
+  .main__filter-price--filter-btn {
+    padding: 2px 0 0 0;
+    border-radius: 2px;
+    margin: 0 0 0 30px;
+    width: 30%;
+    border: 1px solid whitesmoke;
+    background: whitesmoke; }
+
+.main__filter-price--slider {
+  height: 80px; }
+  .main__filter-price--slider-style {
+    border: 1px solid black;
+    background: none; }
+
+.main__filter-color {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .main__filter-color--info {
+    margin: 0;
+    padding: 40px 0 15px 0;
+    font-size: 18px; }
+  .main__filter-color--items {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around; }
+    .main__filter-color--items-grey {
+      border-radius: 50%;
+      background: #c8c8c8;
+      height: 30px;
+      width: 30px; }
+    .main__filter-color--items-white {
+      border-radius: 50%;
+      background: black;
+      height: 30px;
+      width: 30px; }
+    .main__filter-color--items-red {
+      border-radius: 50%;
+      background: #fe8a8a;
+      height: 30px;
+      width: 30px; }
+    .main__filter-color--items-blue {
+      border-radius: 50%;
+      background: #b4e6fd;
+      height: 30px;
+      width: 30px; }
+    .main__filter-color--items-green {
+      border-radius: 50%;
+      background: #bffdca;
+      height: 30px;
+      width: 30px; }
+
+.main__filter-size {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .main__filter-size--text {
+    color: #848484;
+    padding: 20px 0 0 0; }
+  .main__filter-size--info {
+    margin: 0;
+    padding: 38px 0 0 0;
+    font-size: 18px; }
+
+.main__filter-brands {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  .main__filter-brands--text {
+    color: #848484;
+    padding: 20px 0 0 0; }
+  .main__filter-brands--info {
+    margin: 0;
+    padding: 40px 0 0 0;
+    font-size: 18px; }
+
+.main__tags {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px 0 0 0; }
+  .main__tags--text {
+    color: #848484; }
