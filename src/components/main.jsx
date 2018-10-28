@@ -2,6 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'reactstrap';
+import {MainCategory} from "./mainCategory.jsx";
+import {MainFilterPrice} from "./mainFilterPrice.jsx";
+import {MainFilterColor} from "./mainFilterColor.jsx";
+import {MainFilterSize} from "./mainFilterSize.jsx";
+import {MainFilterBrands} from "./mainFilterBrands.jsx";
+import {MainTags} from "./mainTags.jsx";
 
 
 export class Main extends React.Component {
@@ -10,7 +16,10 @@ export class Main extends React.Component {
         this.state = {
             select: "A-Z",
             showingElements: [],
-            allElements: [1,2,3]
+            allElements: [1,2,3,4,5,6],
+            priceUp: 1000,
+            priceDown: 0,
+            priceMax: 1200
         }
     }
 
@@ -22,6 +31,16 @@ export class Main extends React.Component {
         this.setState({
             select: e.target.value
         })
+    };
+
+    filterUpPrice = (priceUp) => {
+        this.state.priceUp=priceUp;
+        console.log(priceUp)
+    };
+
+    filterDownPrice = (priceDown) => {
+        this.state.priceDown=priceDown;
+        console.log(priceDown)
     };
 
     render(){
@@ -47,7 +66,17 @@ export class Main extends React.Component {
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3">
-
+                        <h2 className="main__category--info">Category</h2>
+                        <MainCategory/>
+                        <hr className="main__category--line"/>
+                        <h2 className="main__category--info">Filter by</h2>
+                        <MainFilterPrice priceUp={this.filterUpPrice} priceDown={this.filterDownPrice} priceMax={this.state.priceMax}/>
+                        <MainFilterColor/>
+                        <MainFilterSize/>
+                        <MainFilterBrands/>
+                        <hr className="main__category--line"/>
+                        <h3 className="main__category--info">Popular Tags</h3>
+                        <MainTags/>
                     </div>
                     <div className="col-lg-9">
                         <div className="main__show-info">

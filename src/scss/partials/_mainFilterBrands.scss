@@ -1,0 +1,15 @@
+.main__filter-brands{
+  display: flex;
+  flex-direction: column;
+
+  &--text{
+    color: rgb(132,132,132);
+    padding: 20px 0 0 0;
+  }
+
+  &--info{
+    margin: 0;
+    padding: 40px 0 0 0;
+    font-size: 18px;
+  }
+}
