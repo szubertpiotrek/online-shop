@@ -1,82 +1,83 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav, NavLink } from 'reactstrap';
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-library.add(faChevronLeft,faChevronRight)
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+    BrowserRouter
+} from 'react-router-dom';
+import scrollToComponent from 'react-scroll-to-component';
 
 export class Header extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            page: 1,
-            photos: []
-        }
+            scroll: false
+        };
     }
 
     componentDidMount(){
-
+        window.addEventListener('scroll', this.handleOnScroll);
     }
 
+    handleOnScroll = () => {
+        if(window.scrollY >200) {
+            this.setState({
+                scroll: true
+            })
+        }else{
+            this.setState({
+                scroll: false
+            })
+        }
+    };
+
+    handleOnClickShop = () => {
+        scrollToComponent(this.props.refShop, {
+            offset: -80,
+            align: 'top',
+            duration: 1500
+        });
+    };
+
+    handleOnClickHome = () => {
+        scrollToComponent(this.props.refHome, {
+            offset: 0,
+            align: 'top',
+            duration: 1500
+        });
+    };
+
     render(){
-        return <header className="header">
-            <div className="container header__background">
+        const scrollStyle = {
+            backgroundColor: "rgb(230,230,230)",
+            boxShadow: "3px 3px 5px 0px rgba(0,0,0,0.75)",
+            transition: "0.5s"
+        };
+
+        return <header className="header" style={this.state.scroll===true? scrollStyle : {transition: "0.5s"}}>
+            <div className="container">
                 <div className="row">
-                    <div className="col-lg-5">
-                        <div className="header__nav--logo">
-                            <img src={require("../pictures/logo.png")} alt="" className="header__nav--logo-item"/>
-                        </div>
-                    </div>
                     <div className="col-lg-6">
+                        <NavLink exact to="/" className="header__nav--logo">
+                            <img src={require("../pictures/logo.png")} alt="" className="header__nav--logo-item"/>
+                        </NavLink>
+                    </div>
+                    <div className="col-lg-5">
                         <ul className="header__nav--list">
-                            <li className="header__nav--item">Home</li>
-                            <li className="header__nav--item">Shop</li>
-                            <li className="header__nav--item">Journal</li>
-                            <li className="header__nav--item">Elements</li>
-                            <li className="header__nav--item">Pages</li>
+                            <li><NavLink exact to="/" className="header__nav--item" onClick={this.handleOnClickHome}>Home</NavLink></li>
+                            <li className="header__nav--item" onClick={this.handleOnClickShop}>Shop</li>
+                            <li><NavLink to="/journal" className="header__nav--item">Journal</NavLink></li>
+                            <li><NavLink to="/pages" className="header__nav--item">Pages</NavLink></li>
                         </ul>
                     </div>
                     <div className="col-lg-1">
-                        <div className="header__nav--basket">
+                        <NavLink to="/basket" className="header__nav--basket">
                             <img src={require("../pictures/payment.png")} alt=""/>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-lg-2">
-                        <div className="header__intro--button-left">
-                            <button className="header__intro--button-item">
-                                <FontAwesomeIcon icon="chevron-left"></FontAwesomeIcon>
-                            </button>
-                        </div>
-                    </div>
-                    <div className="col-lg-5"></div>
-                    <div className="col-lg-3">
-                        <div className="header__intro--post">
-                            <h1 className="header__intro--text">Sky Planet</h1>
-                            <div className="header__intro--link">
-                                <a href="" className="header__intro--link-item">Shop Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-lg-2">
-                        <div className="header__intro--button-right">
-                            <button className="header__intro--button-item">
-                                <FontAwesomeIcon icon="chevron-right"></FontAwesomeIcon>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-lg-12">
-                        <div className="header__page">
-                            <span className="header__page--item">{this.state.page} of {this.state.photos.length}</span>
-                        </div>
+                        </NavLink>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,13 @@
+.main__pages{
+  display: flex;
+  justify-content: flex-end;
+  padding: 40px 0;
+
+  &--item{
+    padding: 0 0 0 10px;
+  }
+
+  &--arrow{
+    padding: 0 0 0 10px;
+  }
+}

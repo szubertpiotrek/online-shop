@@ -1,6 +1,9 @@
 .header{
-  background-color: #F5F5F5;
-  height: 750px;
+  top:0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 100;
 
   &__background{
     background-image: url("../pictures/flower1.png");
@@ -16,17 +19,20 @@
   }
 
   &__nav--item{
+    cursor: pointer;
     color: #8F8F8F;
     text-transform: uppercase;
     transition: 0.5s;
 
     &:hover{
+      text-decoration: none;
       color: #000000;
       transition: 0.5s;
     }
   }
 
   &__nav--list{
+    margin: 0;
     height: 80px;
     display: flex;
     justify-content: space-between;
@@ -105,3 +111,4 @@
   }
 
 }
+

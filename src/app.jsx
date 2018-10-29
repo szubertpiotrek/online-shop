@@ -1,13 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from 'reactstrap';
 
 require('./scss/main.scss');
 
-import {Main} from './components/main.jsx';
-import {Header} from "./components/header.jsx";
-import {SectionPost} from "./components/sectionPost.jsx";
+import {Home} from "./components/home.jsx";
+import {Shop} from "./components/shop.jsx";
+
+import {
+    HashRouter,
+    Route,
+    Link,
+    Switch,
+    NavLink,
+    BrowserRouter
+} from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -17,11 +24,12 @@ class App extends React.Component {
    }
 
     render() {
-        return <div>
-            <Header/>
-            <SectionPost/>
-            <Main />
-        </div>
+        return <HashRouter>
+            <Switch>
+                <Route exact path={'/'} component={Home}/>
+                <Route path={'/shop'} component={Shop}/>
+            </Switch>
+        </HashRouter>
     }
 
 }

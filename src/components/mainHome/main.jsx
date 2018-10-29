@@ -8,6 +8,7 @@ import {MainFilterColor} from "./mainFilterColor.jsx";
 import {MainFilterSize} from "./mainFilterSize.jsx";
 import {MainFilterBrands} from "./mainFilterBrands.jsx";
 import {MainTags} from "./mainTags.jsx";
+import {MainPages} from "./mainPages.jsx";
 
 
 export class Main extends React.Component {
@@ -24,7 +25,9 @@ export class Main extends React.Component {
     }
 
     componentDidMount(){
-
+        if ( typeof this.props.shop === 'function' ){
+            this.props.shop(this.shop);
+        }
     }
 
     handleOnSelect = (e) => {
@@ -62,7 +65,7 @@ export class Main extends React.Component {
             </div>
         });
         
-        return <section>
+        return <section ref={shop => { this.shop = shop }}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3">
@@ -92,6 +95,9 @@ export class Main extends React.Component {
                         <div className="main__elements">
                             {ShopList}
                         </div>
+                    </div>
+                    <div className="col-lg-12">
+                        <MainPages/>
                     </div>
                 </div>
             </div>
