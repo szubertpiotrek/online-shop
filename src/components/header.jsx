@@ -71,7 +71,7 @@ export class Header extends React.Component {
                             <li><NavLink exact to="/" className="header__nav--item" onClick={this.handleOnClickHome}>Home</NavLink></li>
                             <li className="header__nav--item" onClick={this.handleOnClickShop}>Shop</li>
                             <li><NavLink to="/journal" className="header__nav--item">Journal</NavLink></li>
-                            <li><NavLink to="/pages" className="header__nav--item">Pages</NavLink></li>
+                            <li><NavLink to="/pages" className="header__nav--item">Log In</NavLink></li>
                         </ul>
                     </div>
                     <div className="col-lg-1">
