@@ -12,25 +12,60 @@ export class MainFilterPrice extends React.Component{
             value: {
                 min: Math.round(this.props.priceMax/7),
                 max: Math.round(this.props.priceMax-this.props.priceMax/7)
+            },
+            valueInput: {
+                min: Math.round(this.props.priceMax/7),
+                max: Math.round(this.props.priceMax-this.props.priceMax/7)
             }
         }
     }
 
     handleValueMin = (e) => {
-        console.log(e.target.value);
-        this.setState({
-            value: {
-               min : e.target.value
-            }
-        })
+        if(this.state.value.max>=e.target.value){
+            this.setState({
+                value: {
+                    min :Number(e.target.value),
+                    max: this.state.value.max
+                }
+            })
+        }else{
+            this.setState({
+                value: {
+                    max : this.state.value.max,
+                    min: this.state.value.max
+                }
+            })
+        }
     };
 
     handleValueMax = (e) => {
-        this.setState({
-            value: {
-                max : e.target.value
-            }
-        })
+        if(this.state.value.min>=e.target.value){
+            this.setState({
+                valueInput: {
+                    max :Number(e.target.value),
+                    min: this.state.value.min
+                },
+                value: {
+                    max :this.state.value.min,
+                    min: this.state.value.min
+                }
+            })
+        }else if(this.state.value.max<=e.target.value){
+            this.setState({
+                value: {
+                    max :this.props.priceMax,
+                    min: this.state.value.min
+                }
+            })
+        }
+        else{
+            this.setState({
+                value: {
+                    max :Number(e.target.value),
+                    min: this.state.value.min
+                }
+            })
+        }
     };
 
     handleOnSubmit = (e) => {
@@ -47,7 +82,7 @@ export class MainFilterPrice extends React.Component{
         return <div className="main__filter-price">
             <h3 className="main__filter-price--info">Price</h3>
             <div className="main__filter-price--slider">
-                <InputRange className="main__filter-price--slider-style"
+                <InputRange
                     draggableTrack
                     maxValue={this.props.priceMax}
                     minValue={0}
@@ -57,8 +92,8 @@ export class MainFilterPrice extends React.Component{
                 />
             </div>
             <form onSubmit={e => this.handleOnSubmit(e)} className="main__filter-price--filter">
-                <input type="text" className="main__filter-price--filter-down" value={this.state.value.min} onChange={e => this.handleValueMin(e)}/>
-                <input type="text" className="main__filter-price--filter-up" value={this.state.value.max} onChange={e => this.handleValueMax(e)}/>
+                <input maxLength={4} type="text" className="main__filter-price--filter-down" value={this.state.value.min} onChange={e => this.handleValueMin(e)}/>
+                <input maxLength={4} type="text" className="main__filter-price--filter-up" value={this.state.value.max<=this.state.value.min? this.state.valueInput.max : this.state.value.max} onChange={e => this.handleValueMax(e)}/>
                 <button type="submit" className="main__filter-price--filter-btn">Filter</button>
             </form>
         </div>

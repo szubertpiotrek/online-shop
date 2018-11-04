@@ -36,11 +36,37 @@
   }
 
   &--slider{
-    height: 80px;
+    height: 40px;
 
     &-style{
-      border: 1px solid black;
-      background: none;
+
     }
   }
+}
+
+div .input-range__slider{
+border: 2px solid #000;
+background-color: #FFF;
+width: 1.4rem;
+height: 1.4rem;
+margin-left: -.7rem;
+margin-top: -.85rem;
+}
+
+div .input-range__label {
+  display: none;
+}
+
+div .input-range__track--active {
+  background-color: #000;
+}
+
+.input-range__track {
+  background: #eeeeee;
+  border-radius: 0.3rem;
+  cursor: pointer;
+  display: block;
+  height: 0.2rem;
+  position: relative;
+  transition: left 0.3s ease-out, width 0.3s ease-out;
 }

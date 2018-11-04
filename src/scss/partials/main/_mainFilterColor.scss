@@ -12,40 +12,17 @@
     display: flex;
     justify-content: space-around;
 
-    &-grey {
+    &-val {
       border-radius: 50%;
-      background: rgb(200, 200, 200);
       height: 30px;
       width: 30px;
+      cursor:pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0.5px solid rgba(0,0,0,0.5);
     }
 
-    &-white {
-      border-radius: 50%;
-      background: rgb(0, 0, 0);
-      height: 30px;
-      width: 30px;
-    }
-
-    &-red {
-      border-radius: 50%;
-      background: rgb(254, 138, 138);
-      height: 30px;
-      width: 30px;
-    }
-
-    &-blue {
-      border-radius: 50%;
-      background: rgb(180, 230, 253);
-      height: 30px;
-      width: 30px;
-    }
-
-    &-green {
-      border-radius: 50%;
-      background: rgb(191, 253, 202);
-      height: 30px;
-      width: 30px;
-    }
   }
 
 }

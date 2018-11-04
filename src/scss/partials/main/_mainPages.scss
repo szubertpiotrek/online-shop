@@ -5,9 +5,18 @@
 
   &--item{
     padding: 0 0 0 10px;
+    color: rgb(193, 193, 193);
+    cursor: pointer;
+    transition: 0.5s;
+
+    &:hover{
+      color: rgb(0,0,0);
+      transition: 0.5s;
+    }
   }
 
   &--arrow{
+    cursor: pointer;
     padding: 0 0 0 10px;
   }
 }

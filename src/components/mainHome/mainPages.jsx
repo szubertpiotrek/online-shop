@@ -12,18 +12,46 @@ export class MainPages extends React.Component{
     constructor(props){
         super(props);
         this.state = {
-            pages: [1,2,3,12]
+            page: 1
         }
     }
 
+    handleOnClickRight = () => {
+        if(Math.ceil(this.props.pages)>this.state.page){
+            this.setState({
+                page: this.state.page+1
+            });
+            if(typeof this.props.page==='function'){
+                this.props.page(this.state.page+1);
+            }
+        }
+    };
+
+    handleOnClickPage = (e,i) => {
+        this.setState({
+            page: i
+        });
+        if(typeof this.props.page==='function'){
+            this.props.page(i);
+        }
+    };
+
     render(){
-        const page = this.state.pages.map((el,i)=>{
-           return <span key={i} className="main__pages--item">{el.toString().length===1? `0`+el : el}</span>
+        let pages=[];
+        for(let i=1; i<=Math.ceil(this.props.pages);i++){
+            pages = [...pages,i];
+        }
+
+        const page = pages.map((el,i)=>{
+           return <span key={i} className="main__pages--item" style={this.state.page===i+1? {color: "rgb(0, 0, 0)"} : null}
+                        onClick={e =>this.handleOnClickPage(e,i+1)}>
+                    {el.toString().length===1? `0`+el : el}
+                  </span>
         });
 
         return <div className="main__pages">
             {page}
-            <div className="main__pages--arrow">
+            <div className="main__pages--arrow" onClick={this.handleOnClickRight}>
                 <FontAwesomeIcon icon="arrow-right"/>
             </div>
         </div>
